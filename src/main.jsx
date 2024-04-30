@@ -1,23 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./main.css";
+// import "./main.css";
+import "@radix-ui/themes/styles.css";
 import App from "./сomponents/App";
-
-import { GlobalStyle } from "./сomponents/GlobalStyle";
+import { Theme } from "@radix-ui/themes";
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-import { persistor, store } from "../redux/store";
-import { PersistGate } from "redux-persist/integration/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <BrowserRouter basename="/product-cards">
-            <Provider store={store}>
-                <PersistGate persistor={persistor}></PersistGate>
+            <Theme>
                 <App />
-                <GlobalStyle />
-            </Provider>
+            </Theme>
         </BrowserRouter>
     </React.StrictMode>
 );

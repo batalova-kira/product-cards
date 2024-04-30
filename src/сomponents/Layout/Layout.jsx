@@ -5,14 +5,11 @@ const Layout = ({ children }) => {
     return (
         <Container>
             <Header>
-                <StyledNavLink className="header-link" to="/">
-                    Home
+                <StyledNavLink className="header-link" to="/card1">
+                    Card 1
                 </StyledNavLink>
-                <StyledNavLink className="header-link" to="/catalog">
-                    Catalog
-                </StyledNavLink>
-                <StyledNavLink className="header-link" to="/favorites">
-                    Favorites
+                <StyledNavLink className="header-link" to="/card2">
+                    Card 2
                 </StyledNavLink>
             </Header>
             <main>{children}</main>
